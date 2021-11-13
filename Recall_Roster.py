@@ -9,18 +9,29 @@ Recall_Elements = {
 "Email": "Fake Email"
 }
 
-def get_input():
-    global entry
-    string= entry.get()
-    if string in Recall_Elements["First Name"]:
-        label2 = tk.Label(text= Recall_Elements["Address"])
-        label2.pack()
+
          
 label = tk.Label(text="Who Are You Looking For")
 label2 = tk.Label(text= "What are you looking for")
 entry = tk.Entry()
 entry2 = tk.Entry()
-button = tk.Button(text= "Search", width= 20, command=get_input)
+button = tk.Button(text= "Search", width= 20, command= lambda: [get_input(), get_2nd_input(), print_it()])
+
+def get_input():
+    global entry
+    string= entry.get()
+
+   
+def get_2nd_input():
+    global entry2
+    string2= entry2.get()
+   
+
+def print_it():
+    
+
+
+
 
 
 label.pack()
