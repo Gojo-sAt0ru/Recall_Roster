@@ -33,7 +33,7 @@ def get_2nd_input():
 
 def print_it():
     if string in Recall_Elements["First Name"] and string2 in Recall_Elements:
-        label3 = tk.Label(text= "You're close")
+        label3 = tk.Label(text= Recall_Elements[string2])
     label3.pack()
 
 
