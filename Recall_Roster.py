@@ -19,19 +19,22 @@ button = tk.Button(text= "Search", width= 20, command= lambda: [get_input(), get
 
 def get_input():
     global entry
+    global string
     string= entry.get()
+    
 
    
 def get_2nd_input():
     global entry2
+    global string2
     string2= entry2.get()
+
    
 
 def print_it():
-    
-
-
-
+    if string in Recall_Elements["First Name"] and string2 in Recall_Elements:
+        label3 = tk.Label(text= "You're close")
+    label3.pack()
 
 
 label.pack()
