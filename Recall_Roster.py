@@ -1,21 +1,20 @@
 import tkinter as tk
 app = tk.Tk()
 
-Larry = {
+recall_roster= {
 "First Name": "Larry",
 "Last Name": "Fake Last Name",
 "Address": "Fake Address",
 "Phone #": "Fake Phone",
 "Email": "Fake Email"
-}
-Megan = {
+}, {
 "First Name": "Megan",
 "Last Name": "Fake Last Name",
 "Address": "Fake Address",
 "Phone #": "Fake Phone",
 "Email": "Fake Email"}
     
-recall_roster = [Larry, Megan]
+
 
          
 label = tk.Label(text="Who Are You Looking For")
@@ -41,7 +40,7 @@ def get_2nd_input():
 
 def print_it():
     if string in str(recall_roster):
-        final = tk.Label(text= recall_roster[0])
+        final = tk.Label(text= )
         final.pack()
 
 
