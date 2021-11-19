@@ -1,14 +1,21 @@
 import tkinter as tk
 app = tk.Tk()
 
-Recall_Elements = {
+Larry = {
 "First Name": "Larry",
 "Last Name": "Fake Last Name",
 "Address": "Fake Address",
 "Phone #": "Fake Phone",
 "Email": "Fake Email"
 }
-
+Megan = {
+"First Name": "Megan",
+"Last Name": "Fake Last Name",
+"Address": "Fake Address",
+"Phone #": "Fake Phone",
+"Email": "Fake Email"}
+    
+recall_roster = [Larry, Megan]
 
          
 label = tk.Label(text="Who Are You Looking For")
@@ -16,6 +23,7 @@ label2 = tk.Label(text= "What are you looking for")
 entry = tk.Entry()
 entry2 = tk.Entry()
 button = tk.Button(text= "Search", width= 20, command= lambda: [get_input(), get_2nd_input(), print_it()])
+final = tk.Label()
 
 def get_input():
     global entry
@@ -32,9 +40,9 @@ def get_2nd_input():
    
 
 def print_it():
-    if string in Recall_Elements["First Name"] and string2 in Recall_Elements:
-        label3 = tk.Label(text= Recall_Elements[string2])
-    label3.pack()
+    if string in str(recall_roster):
+        final = tk.Label(text= recall_roster[0])
+        final.pack()
 
 
 label.pack()
